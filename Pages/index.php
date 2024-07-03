@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPT Store - Trang chủ</title>
+    <link rel="../Assets/img/logo-fpt-01-1024x774.png" href="favicon.ico" type="image/x-icon">
     <!-- Link CSS của Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Link CSS tùy chỉnh -->
@@ -12,17 +13,17 @@
 </head>
 
 <body>
-    <header class="bg-dark text-white py-4">
+    <header>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://fptcore.com/lapmangtiengiang-com/wp-content/uploads/sites/798/2021/07/CGSQtFPgvd7HKMXvon4l.png" alt="FPT Logo" style="max-width: 150px;">
+                <div class="col">
+                    <img src="https://fptcore.com/lapmangtiengiang-com/wp-content/uploads/sites/798/2021/07/CGSQtFPgvd7HKMXvon4l.png" alt="FPT Logo">
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-6">
                     <nav>
-                        <ul class="list-inline mb-0">
+                        <ul class="list-inline">
                             <li class="list-inline-item"><a href="index.php" class="text-white">Trang chủ</a></li>
-                            <li class="list-inline-item"><a href="products.php" class="text-white">Sản phẩm</a></li>
+                            <li class="list-inline-item"><a href="./product.php" class="text-white">Sản phẩm</a></li>
                             <li class="list-inline-item"><a href="contact.php" class="text-white">Liên hệ</a></li>
                         </ul>
                     </nav>
@@ -31,7 +32,7 @@
         </div>
     </header>
 
-    <section class="hero text-white text-center">
+    <section class="hero text-white">
         <div class="container py-5">
             <h2 class="display-4 mb-4">Chào mừng bạn đến với FPT Store</h2>
             <p class="lead mb-4">Mua sắm dễ dàng và tiện lợi với các gói cước của FPT.</p>
@@ -74,8 +75,8 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-3 mt-5">
-        <div class="container text-center">
+    <footer>
+        <div class="container">
             <p>&copy; 2024 FPT Store. All rights reserved.</p>
         </div>
     </footer>
