@@ -1,67 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPT Store - Trang chủ</title>
-    <link rel="stylesheet" href="../Assets/css/style.css">
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <h1>FPT Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="./index.php">Trang chủ</a></li>
-                    <li><a href="./products.php">Sản phẩm</a></li>
-                    <li><a href="./contact.php">Liên hệ</a></li>
-                </ul>
-            </nav>
+<?php
+include "../Template/header.php";
+?>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1348x400" class="d-block w-100" alt="...">
         </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h2>Chào mừng bạn đến với FPT Store</h2>
-            <p>Mua sắm dễ dàng và tiện lợi với những sản phẩm công nghệ hàng đầu.</p>
-            <a href="products.php" class="btn">Xem sản phẩm</a>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1348x400" class="d-block w-100" alt="...">
         </div>
-    </section>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1348x400" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
-    <section class="featured-products">
-        <div class="container">
-            <h2>Sản phẩm nổi bật</h2>
-            <div class="product-list">
-                <div class="product">
-                    <img src="assets/images/product1.jpg" alt="Sản phẩm 1">
-                    <h3>Sản phẩm 1</h3>
-                    <p class="price">$99.99</p>
-                    <a href="#" class="btn">Mua ngay</a>
+<section class="featured-products py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Các gói cước nổi bật</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gói cước cá nhân</h5>
+                        <p class="card-text">Gói cước dành cho cá nhân sử dụng Internet tốc độ cao.</p>
+                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
                 </div>
-                <div class="product">
-                    <img src="assets/images/product2.jpg" alt="Sản phẩm 2">
-                    <h3>Sản phẩm 2</h3>
-                    <p class="price">$129.99</p>
-                    <a href="#" class="btn">Mua ngay</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gói cước doanh nghiệp</h5>
+                        <p class="card-text">Gói cước dành cho doanh nghiệp với nhu cầu sử dụng Internet lớn.</p>
+                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
                 </div>
-                <div class="product">
-                    <img src="assets/images/product3.jpg" alt="Sản phẩm 3">
-                    <h3>Sản phẩm 3</h3>
-                    <p class="price">$79.99</p>
-                    <a href="#" class="btn">Mua ngay</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gói cước gia đình</h5>
+                        <p class="card-text">Gói cước phù hợp cho gia đình sử dụng Internet và truyền hình cáp.</p>
+                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 FPT Store. All rights reserved.</p>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+    </div>
+</section>
+<?php
+include "../Template/footer.php";
+?>
