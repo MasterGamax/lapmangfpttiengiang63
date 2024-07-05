@@ -1,0 +1,5 @@
+/* file: custom.css */
+.custom-carousel .carousel-item {
+    transition: transform 1s ease, opacity 1s ease;
+}
+

@@ -1,7 +1,7 @@
 <?php
 include "../Template/header.php";
 ?>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -9,13 +9,13 @@ include "../Template/header.php";
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://via.placeholder.com/1348x400" class="d-block w-100" alt="...">
+            <img src="../Assets/img/Camera-fpt-banner-1024x379-1.png" class="d-block w-100" alt="">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1348x400" class="d-block w-100" alt="...">
+            <img src="../Assets/img/internet-fpt-vung-tau-1-1536x476.webp" class="d-block w-100" alt="">
         </div>
         <div class="carousel-item">
-            <img src="https://via.placeholder.com/1348x400" class="d-block w-100" alt="...">
+            <img src="https://via.placeholder.com/1348x400" class="d-block w-100" alt="">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
