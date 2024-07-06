@@ -1,5 +1,4 @@
 <?php
-// Bắt đầu session
 session_start();
 
 // Bao gồm file cấu hình cơ sở dữ liệu
@@ -80,41 +79,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Đóng kết nối
     mysqli_close($link);
 }
-include "../Template/header.php";
 ?>
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title text-center mb-4">Đăng nhập</h3>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Tên đăng nhập</label>
-                            <input type="text" name="username"
-                                class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
-                                value="<?php echo $username; ?>">
-                            <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Mật khẩu</label>
-                            <input type="password" name="password"
-                                class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                            <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
-                        </div>
-                    </form>
-                    <div class="text-center mt-3">
-                        <p>Chưa có tài khoản? <a href="register.php">Đăng ký ngay</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<?php
-include "../Template/footer.php";
-?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <!-- Bootstrap CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+    .wrapper {
+        width: 360px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .invalid-feedback {
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 class="text-center mb-4">Đăng nhập</h2>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group">
+                <label>Tên đăng nhập</label>
+                <input type="text" name="username"
+                    class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $username; ?>">
+                <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" name="password"
+                    class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Đăng nhập">
+            </div>
+            <p>Bạn chưa có tài khoản? <a href="register.php">Đăng ký ngay</a>.</p>
+        </form>
+    </div>
+    <!-- Bootstrap JS và các thư viện khác -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

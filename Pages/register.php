@@ -92,51 +92,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Đóng kết nối
     mysqli_close($link);
 }
-// Đảm bảo sử dụng Bootstrap 5.0
-include "../Template/header.php";
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title text-center mb-4">Đăng ký tài khoản</h3>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                        <div class="mb-3">
-                            <label for="username" class="form-label">Tên đăng nhập</label>
-                            <input type="text"
-                                class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
-                                id="username" name="username" value="<?php echo $username; ?>" required>
-                            <div class="invalid-feedback"><?php echo $username_err; ?></div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Mật khẩu</label>
-                            <input type="password"
-                                class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
-                                id="password" name="password" required>
-                            <div class="invalid-feedback"><?php echo $password_err; ?></div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="confirm_password" class="form-label">Xác nhận mật khẩu</label>
-                            <input type="password"
-                                class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
-                                id="confirm_password" name="confirm_password" required>
-                            <div class="invalid-feedback"><?php echo $confirm_password_err; ?></div>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">Đăng ký</button>
-                        </div>
-                    </form>
-                    <div class="text-center mt-3">
-                        <a href="login.php" class="text-decoration-none">Đã có tài khoản? Đăng nhập ngay!</a>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <!-- Bootstrap CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+    .wrapper {
+        width: 360px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .invalid-feedback {
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 class="text-center mb-4">Đăng ký tài khoản</h2>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group">
+                <label>Tên đăng nhập</label>
+                <input type="text" name="username"
+                    class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                    value="<?php echo $username; ?>">
+                <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>
-        </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" name="password"
+                    class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Xác nhận mật khẩu</label>
+                <input type="password" name="confirm_password"
+                    class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
+                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Đăng ký">
+            </div>
+            <p>Đã có tài khoản? <a href="login.php">Đăng nhập ngay</a>.</p>
+        </form>
     </div>
-</div>
+    <!-- Bootstrap JS và các thư viện khác -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
 
-<?php
-include "../Template/footer.php";
-?>
+</html>
